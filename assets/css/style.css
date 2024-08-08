@@ -311,6 +311,7 @@ header {
   /* align-items: center; */
   /* padding: 40px; */
   position: relative;
+  padding: 40px 50px;
 }
 
 .community-right::after {
@@ -327,9 +328,9 @@ header {
 .community-text {
   width: 80%;
   color: white;
-  position: absolute;
+  /* position: absolute;
   top: 50px;
-  left: 50px;
+  left: 50px; */
   z-index: 10;
   color: #e1e1e1;
 }
@@ -364,8 +365,8 @@ header {
   object-fit: cover;
   position: absolute;
   z-index: 15;
-  right: -150px;
-  top: 190px;
+  right: -80px;
+  bottom: -50px;
 }
 
 /* Community  End */
@@ -538,10 +539,11 @@ header {
 
 .mebercards {
   display: flex;
+  justify-content: space-between;
   column-gap: 60px;
 }
 
-.member-card {
+#members .member-card {
   width: calc(100% / 3);
   position: relative;
 }
@@ -569,13 +571,13 @@ header {
 
 .member-about {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 0px;
+  left: 0px;
   color: #fff;
-  padding-right: 5rem;
   color: #e1e1e1;
   font-weight: 500;
   z-index: 1;
+  padding: 40px;
 }
 
 .member-about p {
@@ -588,7 +590,11 @@ header {
 }
 
 .member-card .member-name {
-  transform: translateY(230px);
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: white;
+  z-index: 1;
 }
 
 /* Member End */
@@ -755,6 +761,9 @@ footer {
 /* Footer End */
 
 @media screen and (max-width: 1400px) {
+  .portfolio-list::after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -777,6 +786,14 @@ footer {
 
   .find-about {
     width: 70%;
+  }
+
+  .member-card {
+    height: 70vh;
+  }
+
+  .member-card img {
+    height: 100%;
   }
 }
 
@@ -839,7 +856,8 @@ footer {
 
   .community-right {
     width: 100%;
-    height: 80vh;
+    padding: 50px;
+    height: 90vh;
   }
 
   .community-right img {
@@ -847,13 +865,9 @@ footer {
     width: 402px;
     height: 402px;
     left: 0px;
-    top: 30px;
-  }
-
-  .community-right a {
-    position: absolute;
-    top: 680px;
-    left: 0px;
+    margin-bottom: 20px;
+    /* left: 0px;
+    top: 30px; */
   }
 
   .portfolio-header {
@@ -888,7 +902,7 @@ footer {
   }
 
   .member-card {
-    width: 100%;
+    width: 100% !important;
   }
 
   #footer {
@@ -992,12 +1006,6 @@ footer {
 
   .community-left h2 {
     font-size: 40px;
-  }
-
-  .community-right a {
-    top: 750px;
-    width: 100%;
-    text-align: center;
   }
 
   .portfolio-header {
